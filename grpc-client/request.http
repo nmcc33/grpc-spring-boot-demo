@@ -1,0 +1,25 @@
+POST http://localhost:8080/loginAction/v1/queryInfo
+Content-Type: application/json
+
+{
+  "id": 999,
+  "school": "北京大学",
+  "isBoy": true,
+  "personalInfos": [
+    {"identityNumber": 1,"name": "张三"},
+    {"identityNumber": 2,"name": "里斯"}
+  ]
+}
+
+###
+POST http://localhost:8080/loginAction/v1/querySomeData?id=1
+Content-Type: application/json
+
+
+###
+POST http://localhost:8080/loginAction/v1/sendBooksInfo?id=1
+Content-Type: application/json
+
+###
+POST http://localhost:8080/loginAction/v1/calculateSum?id=1
+Content-Type: application/json

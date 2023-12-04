@@ -29,9 +29,9 @@ public class ClientConsumer {
     public JSONObject queryInfo(PersonInfoModel customerListModel) {
         //构建请求参数
         QueryInfoRequest.Builder requestBuild = QueryInfoRequest.newBuilder();
-        Optional.ofNullable(customerListModel.getId()).ifPresent(requestBuild::setId);
+        Optional.of(customerListModel.getId()).ifPresent(requestBuild::setId);
         Optional.ofNullable(customerListModel.getSchool()).ifPresent(requestBuild::setSchool);
-        Optional.ofNullable(customerListModel.isBoy()).ifPresent(requestBuild::setIsBoy);
+        Optional.of(customerListModel.isBoy()).ifPresent(requestBuild::setIsBoy);
         List<IdentityModel> list = customerListModel.getPersonalInfos();
         if (null != list) {
             list.forEach((v) -> {
